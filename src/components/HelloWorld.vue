@@ -156,7 +156,13 @@
 
           <!-- DAEMONS -->
           <article class="occult-card rounded-2xl overflow-hidden">
-            <div class="aspect-video bg-center bg-cover" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop');"></div>
+            <div
+  class="aspect-video bg-center bg-cover"
+  :style="{ backgroundImage: `url(${oracle})` }"
+  role="img"
+  aria-label="Cartas dos Daemons"
+/>
+
             <div class="p-8">
               <div class="text-red-500 text-xs tracking-widest">CARTAS DOS DAEMONS</div>
               <h3 class="mt-2 text-xl font-bold">Mensagens do Abismo</h3>
@@ -233,7 +239,8 @@
 // troque pelo nome/arquivo real em src/assets
 import heroImg from "/src/assets/gnose.jpeg"
 import oraculista from '/src/assets/oraculista.jpeg'
-import lux from '/src/assets/lux.jpeg' 
+import lux from '/src/assets/lux.jpeg'
+import oracle from '/src/assets/oraculo.jpeg'
 
 
 
