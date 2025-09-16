@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-black text-zinc-200 font-serif;
+  }
+}
+
+@layer components {
+  .btn-abyss {
+    @apply relative overflow-hidden rounded-full font-bold tracking-widest px-6 py-3 bg-red-800 hover:bg-red-900 text-white shadow-lg shadow-red-900/40 transition;
+  }
+}
+
+@layer utilities {
+  .glitch-text {
+    @apply text-red-600 font-black tracking-wide text-5xl md:text-6xl;
+  }
+}
