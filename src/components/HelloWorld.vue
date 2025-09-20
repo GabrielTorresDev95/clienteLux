@@ -9,10 +9,10 @@
     <!-- HEADER -->
     <header class="fixed top-0 inset-x-0 z-20 backdrop-blur bg-black/40 border-b border-red-900/30">
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <div class="candle" aria-hidden="true"></div>
-          <div class="candle" aria-hidden="true"></div>
-          <div class="candle" aria-hidden="true"></div>
+        <div class="flex items-center gap-2" aria-hidden="true">
+          <div class="candle"></div>
+          <div class="candle"></div>
+          <div class="candle"></div>
         </div>
 
         <nav class="hidden md:flex gap-6 text-sm tracking-widest">
@@ -29,51 +29,56 @@
           type="button"
           :aria-pressed="playing"
           aria-label="Alternar áudio ambiente"
+          :data-need-gesture="needGesture"
         >
-          {{ playing ? 'SILENCIAR ABISMO' : 'ÁUDIO DO ABISMO' }}
+          {{ playing ? 'SILENCIAR ABISMO' : (needGesture ? 'TOQUE PARA ATIVAR ÁUDIO' : 'ÁUDIO DO ABISMO') }}
         </button>
 
-        <audio ref="audioRef" id="ambience" loop preload="auto" crossorigin="anonymous">
+        <!-- ÁUDIO -->
+        <audio
+          ref="audioRef"
+          id="ambience"
+          loop
+          preload="auto"
+          crossorigin="anonymous"
+          autoplay
+          muted
+          playsinline
+        >
           <source src="https://cdn.jsdelivr.net/gh/anars/blank-audio/15-seconds-of-silence.mp3" type="audio/mpeg" />
         </audio>
       </div>
     </header>
 
-
-
-
     <!-- HERO -->
-<section
-  class="relative min-h-[92vh] flex items-center justify-center text-center overflow-hidden"
-  style="background-image:url('https://images.unsplash.com/photo-1508050919630-b135583b29ab?q=80&w=1600&auto=format&fit=crop'); background-size:cover; background-position:center;"
->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black"></div>
-  <div class="relative z-10 max-w-3xl px-6 parallax">
-    <span class="inline-flex items-center gap-2 text-xs tracking-[0.3em] uppercase text-zinc-400">
-      <i class="block size-1.5 rounded-full bg-red-600"></i> Ritos & Oráculos <i class="block size-1.5 rounded-full bg-red-600"></i>
-    </span>
-
-<div class="mt-6 flex justify-center">
-  <img
-    :src="heroImg"
-    alt="Selo do Oraculista das Sombras"
-    class="w-80 h-80 object-cover ring-4 ring-red-900/50 shadow-2xl shadow-red-900/40
-           animate-[fadeLoop_6s_ease-in-out_infinite]"
-    loading="eager"
-    decoding="async"
-  />
-</div>
-
-
-    <h1
-      class="glitch text-5xl md:text-6xl font-black tracking-wide text-red-600 mt-4"
-      data-text="O ORACULISTA DE OSSOS"
+    <section
+      class="relative min-h-[92vh] flex items-center justify-center text-center overflow-hidden"
+      style="background-image:url('https://images.unsplash.com/photo-1508050919630-b135583b29ab?q=80&w=1600&auto=format&fit=crop'); background-size:cover; background-position:center;"
     >
-      O ORACULISTA DE OSSOS
-    </h1>
-    <!-- ...resto do conteúdo -->
-  </div>
-</section>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black"></div>
+
+      <div class="relative z-10 max-w-3xl px-6 parallax">
+        <span class="inline-flex items-center gap-2 text-xs tracking-[0.3em] uppercase text-zinc-400">
+          <i class="block size-1.5 rounded-full bg-red-600"></i>
+          Ritos &amp; Oráculos
+          <i class="block size-1.5 rounded-full bg-red-600"></i>
+        </span>
+
+        <div class="mt-6 flex justify-center">
+          <img
+            :src="heroImg"
+            alt="Selo do Oraculista das Sombras"
+            class="w-80 h-80 object-cover ring-4 ring-red-900/50 shadow-2xl shadow-red-900/40 animate-[fadeLoop_6s_ease-in-out_infinite]"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+
+        <h1 class="glitch text-5xl md:text-6xl font-black tracking-wide text-red-600 mt-4" data-text="O ORACULISTA DE OSSOS">
+          O ORACULISTA DE OSSOS
+        </h1>
+      </div>
+    </section>
 
     <div class="blood-divider" aria-hidden="true"></div>
 
@@ -84,12 +89,14 @@
         <div class="space-y-6">
           <h2 class="text-3xl font-extrabold text-red-600">Quem caminha nas sombras</h2>
           <p class="text-zinc-300 leading-relaxed">
-            Iniciado em artes antigas, guardião de segredos que respiram entre ossos e cinzas.
-            Conduzo leituras para <strong>revelar o que se esconde</strong>, afastar véus e negociar
-            respostas com entidades que a maioria evita nomear.
+            Luxwell Ferraz é um buscador da luz oculta e mensageiro da gnose luciferiana.
+            Músico, oraculista e estudioso do ocultismo, trilha o caminho da autodeificação há mais de uma década, unindo arte,
+            espiritualidade e sabedoria ancestral. Sua missão é traduzir mistérios invisíveis em sons, palavras e rituais,
+            despertando no outro a centelha adormecida da consciência. Combinando a força da liderança, a visão profética e a
+            expressão criativa, Luxwell Ferraz se apresenta como artista do espírito, portador de chaves de expansão e intérprete
+            do universo demonolátrico.
           </p>
 
-          <!-- LISTA APRIMORADA -->
           <ul class="space-y-3">
             <li class="flex items-start gap-3">
               <span class="mt-1 inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-red-900/50 ring-1 ring-red-800">✠</span>
@@ -113,19 +120,14 @@
         </div>
 
         <!-- MOSAICO DE IMAGENS -->
-     
-<div class="occult-card rounded-2xl p-4 md:p-6">
-  <!-- container com mesma “sensação” de tamanho do mosaico (aprox. 3:2) -->
-  <div class="w-full overflow-hidden rounded-xl" style="aspect-ratio: 3 / 2;">
-    <img
-      :src="oraculista"
-      alt="Oraculista"
-      loading="lazy"
-      class="w-full h-full object-cover object-center"
-    />
-
-
-
+        <div class="occult-card rounded-2xl p-4 md:p-6">
+          <div class="w-full overflow-hidden rounded-xl" style="aspect-ratio: 3 / 2;">
+            <img
+              :src="oraculista"
+              alt="Oraculista"
+              loading="lazy"
+              class="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </div>
@@ -139,12 +141,12 @@
         <div class="grid md:grid-cols-3 gap-8">
           <!-- OSSOS -->
           <article class="occult-card rounded-2xl overflow-hidden">
-           <div
-  class="aspect-video bg-center bg-cover"
-  :style="{ backgroundImage: `url(${lux})` }"
-  role="img"
-  aria-label="Voz dos Ancestrais"
-></div>
+            <div
+              class="aspect-video bg-center bg-cover"
+              :style="{ backgroundImage: `url(${lux})` }"
+              role="img"
+              aria-label="Voz dos Ancestrais"
+            ></div>
             <div class="p-8">
               <div class="text-red-500 text-xs tracking-widest">ORÁCULO DE OSSOS</div>
               <h3 class="mt-2 text-xl font-bold">Voz dos Ancestrais</h3>
@@ -157,12 +159,11 @@
           <!-- DAEMONS -->
           <article class="occult-card rounded-2xl overflow-hidden">
             <div
-  class="aspect-video bg-center bg-cover"
-  :style="{ backgroundImage: `url(${oracle})` }"
-  role="img"
-  aria-label="Cartas dos Daemons"
-/>
-
+              class="aspect-video bg-center bg-cover"
+              :style="{ backgroundImage: `url(${oracle})` }"
+              role="img"
+              aria-label="Cartas dos Daemons"
+            ></div>
             <div class="p-8">
               <div class="text-red-500 text-xs tracking-widest">CARTAS DOS DAEMONS</div>
               <h3 class="mt-2 text-xl font-bold">Mensagens do Abismo</h3>
@@ -174,7 +175,12 @@
 
           <!-- COMPLETA -->
           <article class="occult-card rounded-2xl overflow-hidden">
-            <div class="aspect-video bg-center bg-cover" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop');"></div>
+            <div
+              class="aspect-video bg-center bg-cover"
+              style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop');"
+              role="img"
+              aria-label="Fusão: Ossos + Daemons"
+            ></div>
             <div class="p-8">
               <div class="text-red-500 text-xs tracking-widest">RITO COMPLETO</div>
               <h3 class="mt-2 text-xl font-bold">Fusão: Ossos + Daemons</h3>
@@ -215,7 +221,7 @@
         Envie sua intenção. As portas se abrem para quem fala com firmeza.
       </p>
       <a
-        href="https://wa.me/5599999999999"
+        :href="`https://wa.me/${whatsNumber}`"
         target="_blank"
         rel="noopener noreferrer"
         class="btn-abyss inline-block px-8 py-4 rounded-full bg-red-800 hover:bg-red-900 font-bold tracking-widest shadow-lg shadow-red-900/40"
@@ -229,116 +235,149 @@
     <footer class="py-8 bg-zinc-950 text-center border-t border-red-900/30">
       <div class="runes text-zinc-500 text-xs">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ • ᛟ ᛞ ᛃ ᛉ ᛇ</div>
       <div class="mt-2 text-zinc-600 text-[11px]">
-        © {{ new Date().getFullYear() }} Oraculista das Sombras — Todos os direitos reservados.
+        © {{ currentYear }} Oraculista das Sombras — Todos os direitos reservados.
       </div>
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
-// troque pelo nome/arquivo real em src/assets
-import heroImg from "/src/assets/gnose.jpeg"
+// Imagens (troque pelos arquivos reais em /src/assets)
+import heroImg from '/src/assets/gnose.jpeg'
 import oraculista from '/src/assets/oraculista.jpeg'
 import lux from '/src/assets/lux.jpeg'
 import oracle from '/src/assets/oraculo.jpeg'
 
+import { onMounted, onBeforeUnmount, ref, computed } from 'vue'
 
+const audioRef = ref<HTMLAudioElement | null>(null)
+const soundBtnRef = ref<HTMLButtonElement | null>(null)
+const armed = ref(false)
+const needGesture = ref(false) // navegador exigiu interação
 
-import { onMounted, onBeforeUnmount, ref } from 'vue';
+// inicia ligado por padrão (e grava escolha)
+const stored = typeof window !== 'undefined' ? localStorage.getItem('abyss_playing') : null
+const playing = ref(stored ? stored === 'true' : true)
 
-const audioRef = ref<HTMLAudioElement | null>(null);
-const soundBtnRef = ref<HTMLButtonElement | null>(null);
-const armed = ref(false);
-const playing = ref(localStorage.getItem('abyss_playing') === 'true');
+const whatsNumber = ref('5599999999999') // <-- DDI+DDD+número
+const currentYear = computed(() => new Date().getFullYear())
 
-const AUDIO_URL = 'https://cdn.freesound.org/previews/624/624215_5674468-lq.mp3'; // exemplo público
-let fading: number | null = null;
+// Áudio — coloque o arquivo em public/audio/Pai_Nosso_Luxwell.mp3
+const AUDIO_URL = '/audio/Pai_Nosso_Luxwell.mp3' // ✅ caminho certo quando o arquivo está em /public/audio
+let fading: number | null = null
 
-function clamp(v: number, min = 0, max = 1) { return Math.max(min, Math.min(max, v)); }
+function clamp(v: number, min = 0, max = 1) { return Math.max(min, Math.min(max, v)) }
 
 function fade(targetVolume: number, ms = 600) {
-  const audio = audioRef.value;
-  if (!audio) return;
-  if (fading) cancelAnimationFrame(fading);
-  const start = audio.volume;
-  const delta = clamp(targetVolume) - start;
-  if (delta === 0) return;
-  const t0 = performance.now();
-
+  const audio = audioRef.value
+  if (!audio) return
+  if (fading) cancelAnimationFrame(fading)
+  const start = audio.volume
+  const delta = clamp(targetVolume) - start
+  if (delta === 0) return
+  const t0 = performance.now()
   const step = (t: number) => {
-    const p = Math.min(1, (t - t0) / ms);
-    audio.volume = clamp(start + delta * p);
-    if (p < 1) fading = requestAnimationFrame(step);
-  };
-  fading = requestAnimationFrame(step);
+    const p = Math.min(1, (t - t0) / ms)
+    audio.volume = clamp(start + delta * p)
+    if (p < 1) fading = requestAnimationFrame(step)
+  }
+  fading = requestAnimationFrame(step)
 }
 
 async function ensureArmed() {
-  const audio = audioRef.value;
-  if (!audio || armed.value) return;
-  audio.src = AUDIO_URL;
-  armed.value = true;
+  const audio = audioRef.value
+  if (!audio || armed.value) return
+  audio.src = AUDIO_URL
+  armed.value = true
 }
 
-async function toggleAudio() {
-  const audio = audioRef.value;
-  if (!audio) return;
+async function tryAutoplayNow() {
+  const audio = audioRef.value
+  if (!audio) return
+  await ensureArmed()
   try {
-    if (!armed.value) await ensureArmed();
-
-    if (audio.paused) {
-      audio.volume = 0;
-      await audio.play();
-      fade(1, 700);
-      playing.value = true;
-      localStorage.setItem('abyss_playing', 'true');
-    } else {
-      fade(0, 400);
-      setTimeout(() => {
-        audio.pause();
-        playing.value = false;
-        localStorage.setItem('abyss_playing', 'false');
-      }, 420);
-    }
-  } catch (e) {
-    alert('O navegador bloqueou a reprodução. Toque/click novamente para iniciar o áudio.');
-    console.warn(e);
-  }
-}
-
-function onVisibilityChange() {
-  const audio = audioRef.value;
-  if (!audio) return;
-  if (document.hidden) {
-    if (!audio.paused) audio.pause();
-  } else if (localStorage.getItem('abyss_playing') === 'true') {
-    audio.play().then(() => (playing.value = true)).catch(() => {});
+    audio.muted = true
+    audio.volume = 0
+    await audio.play()        // pode falhar sem gesto
+    setTimeout(() => {
+      audio.muted = false
+      fade(1, 800)
+      playing.value = true
+      needGesture.value = false
+      localStorage.setItem('abyss_playing', 'true')
+    }, 80)
+  } catch {
+    // bloqueado: pedimos gesto sutil no botão
+    needGesture.value = true
+    playing.value = false
+    localStorage.setItem('abyss_playing', 'false')
   }
 }
 
 function unlockOnce() {
   try {
-    const Ctx = (window as any).AudioContext || (window as any).webkitAudioContext;
+    const Ctx = (window as any).AudioContext || (window as any).webkitAudioContext
     if (Ctx) {
-      const ctx = new Ctx();
-      if (ctx.state === 'suspended') ctx.resume();
+      const ctx = new Ctx()
+      if (ctx.state === 'suspended') ctx.resume()
     }
   } catch {}
-  window.removeEventListener('touchend', unlockOnce);
-  window.removeEventListener('click', unlockOnce);
 }
 
+async function toggleAudio() {
+  const audio = audioRef.value
+  if (!audio) return
+  try {
+    if (!armed.value) await ensureArmed()
+    if (audio.paused || needGesture.value) {
+      unlockOnce()
+      audio.muted = false
+      audio.volume = 0
+      await audio.play()
+      fade(1, 700)
+      playing.value = true
+      needGesture.value = false
+      localStorage.setItem('abyss_playing', 'true')
+    } else {
+      fade(0, 400)
+      setTimeout(() => {
+        audio.pause()
+        playing.value = false
+        localStorage.setItem('abyss_playing', 'false')
+      }, 420)
+    }
+  } catch {
+    needGesture.value = true
+    playing.value = false
+    localStorage.setItem('abyss_playing', 'false')
+  }
+}
+
+
+function onVisibilityChange() {
+  const audio = audioRef.value
+  if (!audio) return
+  // Não pausamos ao ocultar; ao voltar, garantimos que retoma se usuário quis.
+  if (!document.hidden && localStorage.getItem('abyss_playing') === 'true') {
+    audio.play().catch(() => {})
+  }
+}
+
+
 onMounted(() => {
-  window.addEventListener('touchend', unlockOnce, { once: true, passive: true });
-  window.addEventListener('click', unlockOnce, { once: true });
-  document.addEventListener('visibilitychange', onVisibilityChange);
-});
+  document.addEventListener('visibilitychange', onVisibilityChange)
+  tryAutoplayNow() // tenta tocar ao montar
+  window.addEventListener('click', unlockOnce, { once: true })
+  window.addEventListener('touchend', unlockOnce, { once: true, passive: true })
+  window.addEventListener('keydown', unlockOnce, { once: true })
+})
 
 onBeforeUnmount(() => {
-  window.removeEventListener('touchend', unlockOnce);
-  window.removeEventListener('click', unlockOnce);
-  document.removeEventListener('visibilitychange', onVisibilityChange);
-});
+  document.removeEventListener('visibilitychange', onVisibilityChange)
+  window.removeEventListener('click', unlockOnce)
+  window.removeEventListener('touchend', unlockOnce)
+  window.removeEventListener('keydown', unlockOnce)
+})
 </script>
 
 <style>
@@ -366,29 +405,21 @@ body { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/s
 @keyframes grain { 0%{transform:translate(0,0)} 100%{transform:translate(-7%,5%)} }
 
 /* Aparecer/Desaparecer contínuo */
-@keyframes fadeLoop {
-  0%, 100% { opacity: 0;   }
-  50%      { opacity: 1;   }
-}
-
-/* Respeita redução de movimento */
-@media (prefers-reduced-motion: reduce) {
-  .animate-\[fadeLoop_6s_ease-in-out_infinite] { animation: none !important; }
-}
-
+@keyframes fadeLoop { 0%,100%{opacity:0} 50%{opacity:1} }
 
 /* NÉVOA */
 .fog, .fog:before, .fog:after{
   position:fixed; inset:-20%; pointer-events:none; z-index:2;
-  background: radial-gradient(60% 40% at 20% 30%, rgba(200,0,0,.08), transparent 60%),
-              radial-gradient(50% 35% at 80% 70%, rgba(255,255,255,.06), transparent 60%),
-              radial-gradient(70% 50% at 50% 50%, rgba(120,0,0,.06), transparent 60%);
+  background:
+    radial-gradient(60% 40% at 20% 30%, rgba(200,0,0,.08), transparent 60%),
+    radial-gradient(50% 35% at 80% 70%, rgba(255,255,255,.06), transparent 60%),
+    radial-gradient(70% 50% at 50% 50%, rgba(120,0,0,.06), transparent 60%);
   filter: blur(30px);
   animation: drift 30s linear infinite;
 }
 .fog:before{ content:""; animation-duration: 55s; mix-blend-mode:screen; }
 .fog:after{ content:""; animation-duration: 75s; mix-blend-mode:screen; }
-@keyframes drift { 0%{transform:translate3d(0,0,0)} 50%{transform:translate3d(4%, -3%, 0)} 100%{transform:translate3d(0,0,0)} }
+@keyframes drift { 0%{transform:translate3d(0,0,0)} 50%{transform:translate3d(4%,-3%,0)} 100%{transform:translate3d(0,0,0)} }
 
 /* SIGIL DE FUNDO */
 .sigil{
@@ -431,8 +462,8 @@ body { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/s
   content:""; position:absolute; top:0; width:14px; height:28px; background:var(--red2);
   border-bottom-left-radius:8px; border-bottom-right-radius:8px; animation:drip 6s ease-in-out infinite;
 }
-.blood-divider:before{ left:12%; animation-delay: .8s }
-.blood-divider:after { left:72%; height:36px; animation-delay: 1.9s }
+.blood-divider:before{ left:12%; animation-delay:.8s }
+.blood-divider:after { left:72%; height:36px; animation-delay:1.9s }
 @keyframes drip { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
 
 /* VELAS */
@@ -467,16 +498,20 @@ body { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/s
 }
 
 /* BOTÃO */
-.btn-abyss{
-  position:relative; overflow:hidden;
-  box-shadow: 0 0 0 rgba(179,0,0,0);
-}
+.btn-abyss{ position:relative; overflow:hidden; box-shadow:0 0 0 rgba(179,0,0,0); }
 .btn-abyss:before{
   content:""; position:absolute; inset:-120% -120% auto auto; width:200%; height:200%;
   background: conic-gradient(from 0deg, transparent, rgba(179,0,0,.18), transparent 30%);
   animation:spin 6s linear infinite; pointer-events:none;
 }
+.btn-abyss[data-need-gesture="true"]{
+  animation: pulse 1.2s ease-in-out infinite;
+}
 @keyframes spin { to{ transform: rotate(360deg) } }
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(179,0,0,.45) }
+  50%     { box-shadow: 0 0 20px 6px rgba(179,0,0,.35) }
+}
 
 /* PARALLAX SUTIL */
 .parallax { transform: translateZ(0); will-change: transform; }
