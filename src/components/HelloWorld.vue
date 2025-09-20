@@ -148,10 +148,10 @@
               aria-label="Voz dos Ancestrais"
             ></div>
             <div class="p-8">
-              <div class="text-red-500 text-xs tracking-widest">ORÁCULO DE OSSOS</div>
-              <h3 class="mt-2 text-xl font-bold">Voz dos Ancestrais</h3>
-              <p class="mt-3 text-zinc-300">Leitura profunda com ossos consagrados, guiada por presságios e quedas.</p>
-              <div class="mt-6 text-red-400 font-extrabold text-lg">R$ 199</div>
+              <div class="text-red-500 text-xs tracking-widest"></div>
+              <h3 class="mt-2 text-xl font-bold">Mentoria a Gnose Luciferiana</h3>
+              <p class="mt-3 text-zinc-300">Mentoria e orientação a Gnose Luciferiana e montar o Altar.</p>
+              <div class="mt-6 text-red-400 font-extrabold text-lg">R$ 166</div>
               <a href="#contato" class="btn-abyss inline-block mt-6 px-5 py-2.5 rounded-full bg-red-800 hover:bg-red-900 font-bold">AGENDAR</a>
             </div>
           </article>
@@ -165,10 +165,10 @@
               aria-label="Cartas dos Daemons"
             ></div>
             <div class="p-8">
-              <div class="text-red-500 text-xs tracking-widest">CARTAS DOS DAEMONS</div>
-              <h3 class="mt-2 text-xl font-bold">Mensagens do Abismo</h3>
-              <p class="mt-3 text-zinc-300">Consulta oracular com conjunção de cartas e sigilos para respostas objetivas.</p>
-              <div class="mt-6 text-red-400 font-extrabold text-lg">R$ 149</div>
+              <div class="text-red-500 text-xs tracking-widest"></div>
+              <h3 class="mt-2 text-xl font-bold">Oraculo Dos Ossos e Cartas dos Daemons</h3>
+              <p class="mt-3 text-zinc-300">Consulta oracular dos ossos e as cartas dos daemons por video chamada.</p>
+              <div class="mt-6 text-red-400 font-extrabold text-lg">R$ 333</div>
               <a href="#contato" class="btn-abyss inline-block mt-6 px-5 py-2.5 rounded-full bg-red-800 hover:bg-red-900 font-bold">INICIAR</a>
             </div>
           </article>
@@ -182,10 +182,10 @@
               aria-label="Fusão: Ossos + Daemons"
             ></div>
             <div class="p-8">
-              <div class="text-red-500 text-xs tracking-widest">RITO COMPLETO</div>
-              <h3 class="mt-2 text-xl font-bold">Fusão: Ossos + Daemons</h3>
+              <div class="text-red-500 text-xs tracking-widest"></div>
+              <h3 class="mt-2 text-xl font-bold">Iniciação a Gnose Luciferiana</h3>
               <p class="mt-3 text-zinc-300">Sessão extensa com leitura cruzada e direcionamento estratégico.</p>
-              <div class="mt-6 text-red-400 font-extrabold text-lg">R$ 299</div>
+              <div class="mt-6 text-red-400 font-extrabold text-lg">R$ 1666</div>
               <a href="#contato" class="btn-abyss inline-block mt-6 px-5 py-2.5 rounded-full bg-red-800 hover:bg-red-900 font-bold">TRAVESSIA</a>
             </div>
           </article>
@@ -221,7 +221,7 @@
         Envie sua intenção. As portas se abrem para quem fala com firmeza.
       </p>
       <a
-        :href="`https://wa.me/${whatsNumber}`"
+        :href="`https://wa.me/558594328597`"
         target="_blank"
         rel="noopener noreferrer"
         class="btn-abyss inline-block px-8 py-4 rounded-full bg-red-800 hover:bg-red-900 font-bold tracking-widest shadow-lg shadow-red-900/40"
