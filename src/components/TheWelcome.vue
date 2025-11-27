@@ -59,11 +59,16 @@
     <section id="sobre" class="py-20 bg-zinc-950/70 border-t border-red-900/30">
       <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-start">
         <div class="space-y-6">
-          <h2 class="text-3xl font-extrabold text-red-600">Quem caminha nas sombras</h2>
+          <h2 class="text-3xl font-extrabold text-red-600">Quem é Luxwell</h2>
           <p class="text-zinc-300 leading-relaxed">
-            Iniciado em artes antigas, guardião de segredos que respiram entre ossos e cinzas.
-            Conduzo leituras para <strong>revelar o que se esconde</strong>, afastar véus e negociar
-            respostas com entidades que a maioria evita nomear.
+          
+Artista • Ocultista • Criador de Caminhos • Portador da Luz Negra
+
+Luxwell é uma das vozes mais singulares e enigmáticas do ocultismo contemporâneo.
+Cantor, magista e orientador espiritual, ele une sabedoria ancestral,
+experiência prática e visão moderna para transformar vidas através da gnose, da arte e do autoconhecimento profundo.
+
+Reconhecido por sua presença intensa, seu olhar direto e sua linguagem sem filtros, Luxwell se tornou referência para aqueles que buscam clareza espiritual, expansão de consciência e poder pessoal real.
           </p>
           <ul class="list-disc pl-5 text-zinc-300 space-y-2">
             <li>Ritos com <strong>ossos consagrados</strong> — voz dos ancestrais.</li>

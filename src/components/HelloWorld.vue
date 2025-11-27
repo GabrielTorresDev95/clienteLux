@@ -87,14 +87,14 @@
       <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-start">
         <!-- TEXTO -->
         <div class="space-y-6">
-          <h2 class="text-3xl font-extrabold text-red-600">Quem caminha nas sombras</h2>
+          <h2 class="text-3xl font-extrabold text-red-600">⭐ QUEM É LUXWELL</h2>
           <p class="text-zinc-300 leading-relaxed">
-            Luxwell Ferraz é um buscador da luz oculta e mensageiro da gnose luciferiana.
-            Músico, oraculista e estudioso do ocultismo, trilha o caminho da autodeificação há mais de uma década, unindo arte,
-            espiritualidade e sabedoria ancestral. Sua missão é traduzir mistérios invisíveis em sons, palavras e rituais,
-            despertando no outro a centelha adormecida da consciência. Combinando a força da liderança, a visão profética e a
-            expressão criativa, Luxwell Ferraz se apresenta como artista do espírito, portador de chaves de expansão e intérprete
-            do universo demonolátrico.
+            Artista • Ocultista • Criador de Caminhos • Portador da Luz Negra
+
+Luxwell é uma das vozes mais singulares e enigmáticas do ocultismo contemporâneo.
+Cantor, magista e orientador espiritual, ele une sabedoria ancestral,
+experiência prática e visão moderna para transformar vidas através da gnose, da arte e do autoconhecimento profundo.
+Reconhecido por sua presença intensa, seu olhar direto e sua linguagem sem filtros, Luxwell se tornou referência para aqueles que buscam clareza espiritual, expansão de consciência e poder pessoal real.
           </p>
 
           <ul class="space-y-3">
@@ -243,10 +243,11 @@
 
 <script setup lang="ts">
 // Imagens (troque pelos arquivos reais em /src/assets)
-import heroImg from '/src/assets/gnose.jpeg'
-import oraculista from '/src/assets/oraculista.jpeg'
-import lux from '/src/assets/lux.jpeg'
-import oracle from '/src/assets/oraculo.jpeg'
+import heroImg from '../assets/gnose.jpeg'
+import oraculista from '../assets/oraculista.jpeg'
+import lux from '../assets/lux.jpeg'
+import oracle from '../assets/oraculo.jpeg'
+
 
 import { onMounted, onBeforeUnmount, ref, computed } from 'vue'
 
