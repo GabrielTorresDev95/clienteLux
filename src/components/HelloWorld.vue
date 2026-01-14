@@ -74,9 +74,6 @@
           />
         </div>
 
-        <h1 class="glitch text-5xl md:text-6xl font-black tracking-wide text-red-600 mt-4" data-text="O ORACULISTA DE OSSOS">
-          O ORACULISTA DE OSSOS
-        </h1>
       </div>
     </section>
 
@@ -89,17 +86,13 @@
         <div class="space-y-6">
           <h2 class="text-3xl font-extrabold text-red-600">⭐ QUEM É LUXWELL</h2>
           <p class="text-zinc-300 leading-relaxed">
-            
+            Luxwell Mago é ocultista, músico e oraculista com mais de 16 anos de experiência, atuando com sistemas simbólicos voltados ao autoconhecimento, à clareza decisória e à expansão da consciência.
 
-            Luxwell Mago é ocultista, músico e oraculista com mais de 16 anos de prática dedicada ao autoconhecimento, à gnose e aos mistérios luciferianos.
+Seu trabalho oracular é fundamentado no Oráculo de Ossos e nas Cartas dos Daemons, utilizados como instrumentos de leitura arquetípica e interpretação simbólica profunda, respeitando a singularidade de cada indivíduo e processo.
 
-Seu trabalho une tradições ocultistas, simbolismo arquetípico, música como linguagem ritual e o oráculo como ferramenta de consciência, criando pontes entre o mundo interno, o inconsciente profundo e a expansão da percepção.
+A atuação de Luxwell integra ocultismo prático, gnose luciferiana e linguagem musical, compreendendo a música como expressão ritualística e meio de acesso a estados ampliados de percepção.
 
-Como oraculista, atua há 16 anos auxiliando pessoas em processos de clareza, decisão e reconexão com sua própria força interior, utilizando sistemas simbólicos e práticas de leitura não-dogmáticas.
-
-Como músico, traduz estados de consciência, arquétipos e experiências espirituais em som, compreendendo a música como um veículo mágico de gnose, expressão e transformação.
-
-Luxwell não segue caminhos prontos: sua atuação é autoral, independente e voltada ao despertar da soberania individual.
+Com abordagem ética, não-dogmática e autoral, suas leituras e orientações visam auxiliar pessoas em momentos de decisão, transição e autoconhecimento, promovendo responsabilidade pessoal, consciência e autonomia espiritual.
           </p>
 
           <ul class="space-y-3">
