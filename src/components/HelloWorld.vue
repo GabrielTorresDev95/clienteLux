@@ -89,7 +89,7 @@
         <div class="space-y-6">
           <h2 class="text-3xl font-extrabold text-red-600">⭐ QUEM É LUXWELL</h2>
           <p class="text-zinc-300 leading-relaxed">
-            Artista • Ocultista • Criador de Caminhos • Portador da Luz Negra<br>
+            
 
             Luxwell Mago é ocultista, músico e oraculista com mais de 16 anos de prática dedicada ao autoconhecimento, à gnose e aos mistérios luciferianos.
 
