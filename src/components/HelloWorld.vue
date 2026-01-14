@@ -89,12 +89,17 @@
         <div class="space-y-6">
           <h2 class="text-3xl font-extrabold text-red-600">⭐ QUEM É LUXWELL</h2>
           <p class="text-zinc-300 leading-relaxed">
-            Artista • Ocultista • Criador de Caminhos • Portador da Luz Negra
+            Artista • Ocultista • Criador de Caminhos • Portador da Luz Negra<br>
 
-Luxwell é uma das vozes mais singulares e enigmáticas do ocultismo contemporâneo.
-Cantor, magista e orientador espiritual, ele une sabedoria ancestral,
-experiência prática e visão moderna para transformar vidas através da gnose, da arte e do autoconhecimento profundo.
-Reconhecido por sua presença intensa, seu olhar direto e sua linguagem sem filtros, Luxwell se tornou referência para aqueles que buscam clareza espiritual, expansão de consciência e poder pessoal real.
+            Luxwell Mago é ocultista, músico e oraculista com mais de 16 anos de prática dedicada ao autoconhecimento, à gnose e aos mistérios luciferianos.
+
+Seu trabalho une tradições ocultistas, simbolismo arquetípico, música como linguagem ritual e o oráculo como ferramenta de consciência, criando pontes entre o mundo interno, o inconsciente profundo e a expansão da percepção.
+
+Como oraculista, atua há 16 anos auxiliando pessoas em processos de clareza, decisão e reconexão com sua própria força interior, utilizando sistemas simbólicos e práticas de leitura não-dogmáticas.
+
+Como músico, traduz estados de consciência, arquétipos e experiências espirituais em som, compreendendo a música como um veículo mágico de gnose, expressão e transformação.
+
+Luxwell não segue caminhos prontos: sua atuação é autoral, independente e voltada ao despertar da soberania individual.
           </p>
 
           <ul class="space-y-3">
