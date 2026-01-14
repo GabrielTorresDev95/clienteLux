@@ -248,7 +248,7 @@ Luxwell não segue caminhos prontos: sua atuação é autoral, independente e vo
 
 <script setup lang="ts">
 // Imagens (troque pelos arquivos reais em /src/assets)
-import heroImg from '../assets/gnose.jpeg'
+import heroImg from '../assets/Luxwell.jpeg'
 import oraculista from '../assets/oraculista.jpeg'
 import lux from '../assets/lux.jpeg'
 import oracle from '../assets/oraculo.jpeg'
