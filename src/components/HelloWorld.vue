@@ -64,15 +64,33 @@
           <i class="block size-1.5 rounded-full bg-red-600"></i>
         </span>
 
-        <div class="mt-6 flex justify-center">
-          <img
-            :src="heroImg"
-            alt="Selo do Oraculista das Sombras"
-            class="w-80 h-80 object-cover ring-4 ring-red-900/50 shadow-2xl shadow-red-900/40 animate-[fadeLoop_6s_ease-in-out_infinite]"
-            loading="eager"
-            decoding="async"
-          />
-        </div>
+<div class="mt-6 flex justify-center">
+  <a
+    href="https://wa.me/558594328597"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="group w-80 h-80 rounded-full flex flex-col items-center justify-center text-center bg-black/70 ring-4 ring-red-900/50 shadow-2xl shadow-red-900/40 hover:bg-red-950/80 transition"
+    aria-label="Entrar em contato pelo WhatsApp"
+  >
+    <span class="text-5xl mb-4">☏</span>
+
+    <span class="text-red-500 text-sm tracking-[0.35em] uppercase">
+      Contato
+    </span>
+
+    <strong class="mt-3 text-2xl text-white tracking-widest">
+      WhatsApp
+    </strong>
+
+    <span class="mt-4 text-zinc-400 text-sm px-6">
+      Toque aqui para falar diretamente e agendar seu atendimento
+    </span>
+
+    <span class="mt-6 px-5 py-2 rounded-full bg-red-800 group-hover:bg-red-900 text-white text-sm font-bold tracking-widest">
+      CHAMAR AGORA
+    </span>
+  </a>
+</div>
 
       </div>
     </section>
