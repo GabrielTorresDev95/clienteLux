@@ -584,6 +584,36 @@ function abrirWhatsApp(
 ) {
   const texto = encodeURIComponent(mensagem)
 
+  const userAgent = navigator.userAgent || ''
+
+  const isAndroid =
+    /Android/i.test(userAgent)
+
+  const isIOS =
+    /iPhone|iPad|iPod/i.test(userAgent)
+
+  // ANDROID
+  // Tenta abrir diretamente o aplicativo do WhatsApp
+  if (isAndroid) {
+    const url =
+      `intent://send?phone=${WHATSAPP_NUMBER}&text=${texto}` +
+      `#Intent;scheme=whatsapp;package=com.whatsapp;end`
+
+    window.location.href = url
+    return
+  }
+
+  // IPHONE / IPAD
+  // Tenta abrir diretamente o aplicativo
+  if (isIOS) {
+    const url =
+      `whatsapp://send?phone=${WHATSAPP_NUMBER}&text=${texto}`
+
+    window.location.href = url
+    return
+  }
+
+  // COMPUTADOR / OUTROS NAVEGADORES
   const url =
     `https://wa.me/${WHATSAPP_NUMBER}?text=${texto}`
 
